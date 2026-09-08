@@ -6,9 +6,9 @@ Bringing together patients and families, clinicians, and researchers around shar
 
 [Explore the website](https://lfr53.github.io/CVID-Compass/) · [Features](#explore-the-network) · [Run locally](#run-locally)
 
-<img src="assets/network-background.png" alt="Soft medical illustration connecting antibody and immune-cell motifs around shared patterns" width="760">
+<img src="assets/reference-design.png" alt="CVID Compass homepage showing shared-pattern connections, role-based entry points and learning sections" width="760">
 
-*Network illustration used on the homepage. This is an illustration, not a screenshot of the interface.*
+*Homepage preview of the CVID Compass interface.*
 
 ## About
 
