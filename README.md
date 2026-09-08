@@ -1,107 +1,146 @@
 # CVID Compass
 
-**Making complex immune science easier to understand—and relevant care and research easier to find.**
+### Connecting the CVID community through shared patterns
 
-CVID Compass is an English–Chinese digital health prototype for people living with common variable immunodeficiency (CVID), their families and caregivers. It brings patient education, molecular mechanisms, research explainers, specialist-centre profiles and study discovery into one patient-facing experience.
+Bringing together patients and families, clinicians, and researchers around shared clinical features, immune profiles and research.
 
-**Demo URL:** [CVID Compass on GitHub Pages](https://lfr53.github.io/CVID-Compass/)
+[Explore the website](https://lfr53.github.io/CVID-Compass/) · [Features](#explore-the-network) · [Run locally](#run-locally)
 
-> This is the intended deployment address. It becomes available after GitHub Pages is enabled and the first deployment succeeds. The platform is a portfolio prototype; account creation, registration and notifications are demonstrations.
+<img src="assets/network-background.png" alt="Soft medical illustration connecting antibody and immune-cell motifs around shared patterns" width="760">
 
-## Why this project exists
+*Network illustration used on the homepage. This is an illustration, not a screenshot of the interface.*
 
-People navigating a rare immune condition often face two connected challenges: understanding complex medical information and finding services or research relevant to their circumstances. Information is scattered across publications, institutional websites and study registries, often written for professionals.
+## About
 
-CVID Compass explores how a patient-centred information platform can connect those steps: understand the disease, explore specialist care, follow research and investigate opportunities for participation.
+CVID Compass is a phenotype-first rare-disease discovery prototype connecting patients, families, clinicians and researchers through CVID education, shared clinical features, research and specialist expertise.
 
-The project also examines a wider product question: how can patients, medical centres, researchers and life-science organisations benefit from a shared discovery platform while patients retain control over participation?
+It helps people explore three related questions:
 
-## What you can explore
+- **Patients and families:** Who is like me?
+- **Clinicians:** Has this pattern been seen before, and who is already working on it?
+- **Researchers:** Where are similar patient groups being studied, and who is working on the same question?
 
-| Area | Current experience |
+Its early value comes from organising existing public research, cohorts, specialist teams and patient organisations. Anonymous contributed cases are a planned addition, not an existing patient database.
+
+## Explore the network
+
+| Area | What you can explore |
 | --- | --- |
-| Understand CVID | Standalone articles covering infection, organ manifestations, laboratory results, genetic clues, immunoglobulin replacement and family support. |
-| Immune molecules | A directory linking to 12 molecular explainers, with discussion of biological functions and associated immune conditions. |
-| Research and discoveries | Patient-facing paper explainers that discuss findings, significance and limitations, with original sources. |
-| Specialist centres | Individual profiles covering service populations, disease interests, referral information where available, and research evidence. Verification coverage varies by field and centre. |
-| Related centres and studies | Filters based on basic characteristics and interests to explore potentially relevant public information. This does not determine clinical eligibility. |
-| Registries and research participation | An educational article and optional demonstration of research-interest registration. |
-| English and Chinese | Language switching across the patient experience. Translation and editorial review remain ongoing. |
-| Responsive layout | Desktop and mobile layouts, standalone article navigation and illustrative mechanism diagrams. |
+| Understand CVID | Topic-led navigation through original educational articles, immune-molecule explainers, references and illustrations. |
+| Patients and families | A single-page questionnaire and a profile-based view of related cases, research and communities. |
+| Clinicians | Structured case filters, illustrative anonymous cases and shared clinical features. |
+| Researchers | Phenotype-defined groups, case counts and available distributions. |
+| Research | Curated projects, cohorts, registries, historical research and clinical trials. |
+| Research teams | Researchers, laboratories and centres with public sources; keyword and country filters. |
+| Community | Patient organisations including PID Care China, Immunodeficiency UK, IDF, IDFA and IPOPI. |
 
-## Screenshots
+The team directory includes INTREPID, Australia's Centre for Personalised Immunology, Fudan and Chongqing teams, alongside groups at Freiburg, Mount Sinai, Garvan, Newcastle, CHOP, Rockefeller and KU Leuven. Coverage is curated and incomplete; listings include broader IEI expertise as well as CVID-related work.
 
-Screenshots below are captured from the working local website, not design mockups.
+English and Chinese are available across the homepage, original educational articles and several exploration views. Some form options, research records and results still require translation.
 
-### Homepage
-![CVID Compass homepage with four discovery pathways](docs/screenshots/home.png)
+## Learning, one topic at a time
 
-### Understanding disease mechanisms
-![Patient article showing infection and immune-dysregulation pathways](docs/screenshots/mechanisms.png)
+The learning hub starts with topics rather than a complete article list:
 
-### Centre and study discovery
-![Filters for exploring potentially relevant centres and studies](docs/screenshots/discovery.png)
+1. Start with CVID
+2. Genetics and immune molecules
+3. Treatment and family life
+4. Understanding research
 
-## The product journey
+Readers open a topic and then an article, while retaining the site's shared navigation and language controls. The original bilingual manuscripts and article illustrations are preserved.
 
-1. Read approachable explanations of CVID and its biology.
-2. Explore specialist-centre profiles and research summaries.
-3. Filter public information by basic characteristics and interests.
-4. Follow official links to investigate services and study requirements.
-5. Explore what voluntary research participation could involve.
+## Research with context
 
-Researchers and clinical teams—not this website—assess suitability for care or enrolment.
+Research is organised into four sections:
 
-## Stakeholder value being explored
+- Currently recruiting
+- Active research / recruitment unclear
+- People like me have been studied
+- Registries & ongoing cohorts
 
-- **Patients and families:** clearer explanations, fewer disconnected searches and easier access to official information.
-- **Medical centres:** clearer descriptions of their services and research interests.
-- **Researchers:** better public understanding of study goals and participation.
-- **Life-science organisations:** a possible future channel for transparent research awareness and aggregate demand insights.
+These are discovery categories, not confirmation of eligibility or participation. Historical studies remain useful for identifying phenotype groups and relevant expertise. Some cohort entries currently appear in more than one section.
 
-These are product hypotheses, not demonstrated recruitment results. Demonstration metrics must not be interpreted as real patient activity.
+Newer records link to institutional profiles, publications or official organisations. Seed statuses are not synchronised with registries and require periodic verification. A team listing does not imply a partnership, an available referral route or open recruitment.
 
-## Portfolio focus
+## Prototype status and privacy
 
-This project demonstrates patient-centred product design, medical knowledge translation, evidence-aware information architecture, bilingual content design and front-end implementation. It provides a concrete basis for discussing digital health product strategy, research engagement and partnership development.
+- The three anonymous cases are **synthetic demonstration records**, not contributed patients.
+- Questionnaire answers remain in page memory and are not automatically uploaded. Refreshing or closing the page can clear them.
+- There is no production backend, registration, case contribution, recovery-code service or patient messaging.
+- Family-cluster and treatment-response information is absent from the demonstration dataset and is labelled as unavailable.
+- Case filters require all selected features; related research may share only some features. This is transparent tag exploration, not a validated medical matching algorithm.
+- Country filtering depends on available profile metadata; older entries have less complete information.
 
-It was developed with AI-assisted coding, drafting and illustration. AI assistance does not replace clinical review. A production launch would require further content validation and operational development.
-
-## Data and implementation boundaries
-
-- Public-source centre and study information may change; follow original sources for current details.
-- Research explainers are educational and do not provide personal treatment advice.
-- The current site has no production authentication, patient database, institutional messaging or email-delivery service.
-- Interest forms are demonstrations and do not save or send submitted information.
-- The discovery experience uses curated public information; it is not a validated clinical matching algorithm or a continuously synchronised registry feed.
-- Do not submit identifiable medical records to this prototype.
+The platform does not diagnose disease, recommend treatment or determine trial eligibility. Similar features do not establish clinical equivalence. Medical questions should be discussed with a qualified clinician.
 
 ## Technology
 
-The deployed site is static HTML, CSS and JavaScript using browser modules and hash-based routes. It can be hosted directly on GitHub Pages without a build command. The repository may also contain local development helpers; these are not needed to serve the website.
+Static HTML, CSS and JavaScript, with hash-based navigation. Editable source uses ES modules; the delivered page loads a generated classic-script bundle for local-file compatibility.
 
-## Deploy with GitHub Pages — browser only
+```text
+index.html
+src/
+  main.js                 # Routes and original discovery data
+  site-bundle.js          # Generated script loaded by the page
+  final-homepage.js        # Homepage and role entry points
+  patient-form.js          # Single-page patient form
+  exploration.js          # Clinician and researcher views
+  education-view.js       # Topic and article navigation
+  network-directory.js    # Research and community records
+  expanded-teams.js       # Additional teams and directory filters
+  reference-visuals.js     # Icons and illustrated navigation
+  *.css                   # Shared and page-specific styles
+assets/                   # Homepage artwork
+education/
+  src/                    # Original bilingual education content
+  assets/                 # Original article illustrations
+  content/                # Supporting content
+scripts/
+  build-preview.cjs       # Rebuild the browser script
+.github/workflows/
+  pages.yml               # GitHub Pages deployment
+```
 
-1. Ensure the repository root contains `index.html`, `src/`, `assets/`, `content/`, `docs/` and this README.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select **main** and **/(root)**, then click **Save**.
-5. Wait for the Pages deployment to finish. The Pages settings screen will display the published URL.
+The integrated learning hub is `#cvid`; articles use `#article-<slug>`. The preserved `education/index.html` is a legacy entry.
 
-Expected URL: **https://lfr53.github.io/CVID-Compass/**
+## Run locally
 
-For future browser uploads, preserve the folder structure and commit the changed files. GitHub Pages will redeploy from the selected branch.
+Open `index.html` with the complete folder structure intact. The generated bundle supports opening the delivered page directly from disk.
 
-## Next development priorities
+An HTTP server is also suitable. For example, with Python installed:
 
-- Continue medical and bilingual editorial review.
-- Improve field-level verification and maintenance of centre and study records.
-- Test usability with patients and caregivers.
-- Validate discovery filters before considering more personalised functionality.
-- Develop consent, authentication and secure communication only when moving beyond the static prototype.
+```sh
+python -m http.server 8000
+```
 
-## Sources and attribution
+Then open `http://localhost:8000`.
 
-Articles and profiles include their own sources where available. Starting points include the [Immune Deficiency Foundation](https://primaryimmune.org/), [PubMed](https://pubmed.ncbi.nlm.nih.gov/) and [ClinicalTrials.gov](https://clinicaltrials.gov/).
+After editing JavaScript source, rebuild the script loaded by the page:
 
-Mechanism illustration notes are recorded in [illustration-notes.md](content/illustration-notes.md). Referenced publications and institutional names remain the property of their respective owners.
+```sh
+node scripts/build-preview.cjs
+```
+
+Commit both the changed source files and the regenerated `src/site-bundle.js`. Hosting the prepared files requires no package installation.
+
+## Deploy to GitHub Pages
+
+Upload `index.html`, `src/`, `assets/`, `education/`, `scripts/` and this README to the repository root.
+
+Update the existing Pages workflow with the supplied `.github/workflows/pages.yml`. Replace the existing deployment configuration rather than adding a second competing workflow. Its existing filename can be retained.
+
+**The deployment must copy `education/`.** The original workflow omitted this directory, which contains the integrated learning hub's content and illustrations.
+
+The supplied workflow deploys on pushes to `main`. Use GitHub Actions as the Pages deployment source, inspect the workflow result and then check the deployed website. Updating only `index.html` without `src/site-bundle.js` can leave the page unable to load.
+
+## Verification and next steps
+
+Checks have covered JavaScript syntax, shared-feature filtering, bilingual article routes, source preservation, directory links and startup across 26 route/language combinations using a DOM stub. These checks do not constitute a full browser, visual, accessibility or medical-content audit.
+
+Remaining work includes completing translations and conditional fields, improving source metadata, validating responsive layouts and user journeys, and verifying research statuses. Anonymous contribution and secure case management remain future backend work.
+
+## Content and attribution
+
+Original educational manuscripts and illustrations are retained. Homepage artwork and design references were supplied by the project owner; development included AI assistance.
+
+Third-party publications, names and artwork retain their respective rights. No institutional endorsement or blanket licence over third-party material is implied.
