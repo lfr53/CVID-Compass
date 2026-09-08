@@ -139,7 +139,7 @@ function educationView(lang,slug){
  const figure=articleFigures[slug];
  const blocks=article.blocks;
  const insertAt=figure?Math.max(0,blocks.findIndex(b=>b.type!=='heading'&&figure[1].test(b.text))):-1;
- const illustration=figure?`<figure><img src="education/assets/${figure[0]}" alt="${esc(figure[zh?2:3])}"><figcaption>${esc(figure[zh?2:3])}</figcaption></figure>`:'';
+ const illustration=figure?`<figure><img src="assets/${figure[0]}" alt="${esc(figure[zh?2:3])}" loading="lazy"><figcaption>${esc(figure[zh?2:3])}</figcaption></figure>`:'';
  const body=blocks.map((b,i)=>(b.type==='heading'?`<h2 id="reading-${i}">${esc(b.text)}</h2>`:`<p>${esc(b.text).replaceAll('\\n','<br>')}</p>`)+(i===insertAt?illustration:'')).join('');
  return `<section class="page-shell education-article"><a class="back-link" href="#cvid">← ${zh?'了解 CVID':'Learn about CVID'}</a><h1>${esc(article.title)}</h1><p class="article-lead">${esc(article.excerpt)}</p><article>${body}<h2>${zh?'参考资料':'References'}</h2><ol>${article.sources.map(s=>`<li>${esc(s)}</li>`).join('')}</ol></article><h2>${zh?'继续阅读':'Continue reading'}</h2><div class="angle-grid">${cards(articles.filter(a=>a.slug!==slug&&a.category===article.category))}</div></section>`;
 }
