@@ -1,0 +1,38 @@
+// Localised display labels only: identifiers, links and filtering data are unchanged.
+const pairs = [
+ ['产品案例','Product case study'],['作品案例','Portfolio case study'],['匹兹堡大学医学中心儿童医院，美国','UPMC Children’s Hospital of Pittsburgh, 美国'],
+ ['一个平台，解决四类参与者之间的信息断层。','Connecting patients, care teams, researchers and industry.'],
+ ['患者端保持克制；这一页解释产品、合作和商业价值如何形成闭环。','This case study describes the product concept, stakeholder needs and potential partnerships.'],
+ ['患者与家属需要什么','What patients and families need'],['可信地理解疾病；知道哪里能获得专科帮助；发现可能相关的研究。','Reliable explanations, access to specialist information and visibility of relevant research.'],['产品怎样解决','Product approach'],['双语解读、中心目录、研究发现工具、原始来源追溯。','Bilingual explanations, centre profiles, study discovery and traceable sources.'],
+ ['医学中心需要什么','What medical centres need'],['让合适的人找到中心；减少重复解释；展示真实专长与研究。','Help people understand their services, reduce repeated explanations and make expertise visible.'],['经中心确认的资料页、转诊说明、研究项目展示、可更新的数据后台。','A proposed workflow for centre-confirmed profiles, referral information, research listings and maintained records.'],
+ ['研究机构需要什么','What research institutions need'],['找到更符合研究方向的人群；提升研究可见度；建立跨中心合作。','Reach interested communities, improve study visibility and support cross-centre collaboration.'],['标准化研究信息、预筛选意向而非资格判断、中心网络地图、招募漏斗。','Structured study information and interest discovery rather than eligibility decisions, with future aggregate engagement reporting.'],
+ ['药企与生物技术公司需要什么','What pharmaceutical and biotechnology teams need'],['理解未满足需求；找到研究者和中心；合规开展研究教育与招募。','Understand unmet needs, identify research expertise and support responsible study education.'],['匿名聚合洞察、研究生态图谱、可衡量的试点；不出售可识别患者资料。','Potential aggregate insights and measurable pilots, without selling identifiable patient information.'],
+ ['不是四套孤立功能，而是一条可信的信息循环。','A shared information pathway.'],['官方数据与中心核验','Official sources and centre verification'],['患者友好型解释','Patient-friendly explanations'],['匿名需求与使用信号','Aggregate interest and usage signals'],['中心和研究项目持续更新','Maintained centre and study information'],['底线：患者控制个人信息；“匹配”只解释相关性，不判断入组资格；合作方不能购买个人身份或病历数据。','Principles: patients control disclosure; discovery explains relevance, not eligibility; partners cannot purchase identities or medical records.'],
+ ['让中心看到真实兴趣，而不是患者名单。','Show aggregate interest, not patient lists.'],['示例数据','Illustrative data'],['90天关注用户','Followers over 90 days'],['希望了解研究','Interested in research'],['打开官方页面','Opened an official page'],['允许站内信联系','Opted into inbox contact'],['查看中心页面','View a centre'],['关注中心','Follow a centre'],['登记研究兴趣','Express research interest'],['打开机构消息','Open an institution message'],['主动前往官方页面','Choose to visit the official source'],['机构只能看到聚合趋势。只有患者主动回复某家已认证中心时，才会分享患者选择公开的信息。','Proposed model: institutions see aggregate trends. Personal information would only be shared when a patient chooses to reply to a verified centre.'],['机构需求报告 · 演示','Institution demand report · Demo'],
+ ['复旦大学附属儿科医院 · 临床免疫与过敏科','Children’s Hospital of Fudan University · Clinical Immunology and Allergy'],
+ ['重庆医科大学附属儿童医院 · 风湿免疫科','Children’s Hospital of Chongqing Medical University · Rheumatology and Immunology'],
+ ['上海儿童医学中心','Shanghai Children’s Medical Center'],['北京协和医院','Peking Union Medical College Hospital'],['北京儿童医院','Beijing Children’s Hospital'],['广州市妇女儿童医疗中心','Guangzhou Women and Children’s Medical Center'],['复旦大学附属华山医院','Huashan Hospital, Fudan University'],['复旦大学附属中山医院','Zhongshan Hospital, Fudan University'],
+ ['大奥蒙德街医院 · 免疫科','Great Ormond Street Hospital · Immunology'],['伦敦皇家自由医院 · 免疫科','Royal Free London · Immunology'],['纽卡斯尔医院 · 免疫科','Newcastle Hospitals · Immunology'],['牛津大学医院 · 临床免疫科','Oxford University Hospitals · Clinical Immunology'],['曼彻斯特大学医院基金会 · 免疫科','Manchester University NHS Foundation Trust · Immunology'],['原发性免疫缺陷整合转化研究项目（INTREPID）','INTREPID · Integrative Translational Research in Primary Immunodeficiency'],['原发性免疫缺陷服务质量认证网络（QPIDS）','QPIDS · Quality in Primary Immunodeficiency Services'],['美国国立卫生研究院临床中心 · 原发性免疫缺陷','NIH Clinical Center · Primary Immunodeficiency'],['费城儿童医院 · 免疫科',"Children's Hospital of Philadelphia · Immunology"],['波士顿儿童医院 · 免疫科',"Boston Children's Hospital · Immunology"],['辛辛那提儿童医院 · 免疫缺陷',"Cincinnati Children's · Immune Deficiency"],['西奈山医院 · 临床免疫科','Mount Sinai · Clinical Immunology'],['约翰斯·霍普金斯 · 过敏与临床免疫科','Johns Hopkins · Allergy & Clinical Immunology'],['个体化免疫学中心（CPI）','Centre for Personalised Immunology (CPI)'],['墨尔本皇家儿童医院 · 免疫科',"Royal Children's Hospital · Immunology"],['悉尼儿童医院网络 · 免疫科',"Sydney Children's Hospitals Network · Immunology"],['昆士兰儿童医院 · 免疫科',"Queensland Children's Hospital · Immunology"],['珀斯儿童医院 · 免疫科',"Perth Children's Hospital · Immunology"],
+ ['国家儿童医学中心 IEI 联盟','National Children’s Medical Center IEI alliance'],['中国原发性免疫缺陷病协作体系','Chinese primary immunodeficiency collaboration'],['国家儿童医学中心','National Children’s Medical Center'],['国家罕见病诊疗协作网','National rare-disease care network'],['儿童罕见病协作体系','Paediatric rare-disease collaboration'],['复旦大学附属医院体系','Fudan University hospital system'],
+ ['英国原发性免疫缺陷认证服务网络','UK accredited PID services network'],['杰弗里·莫德尔网络','Jeffrey Modell Network'],['哈佛医学院','Harvard Medical School'],['伊坎医学院','Icahn School of Medicine'],['约翰斯·霍普金斯医学','Johns Hopkins Medicine'],['默多克儿童研究所','Murdoch Children’s Research Institute'],['昆士兰儿童卫生服务','Children’s Health Queensland'],['儿童与青少年卫生服务','Child and Adolescent Health Service'],['英国国家医疗服务体系 / 纽卡斯尔大学','NHS / Newcastle University'],['英国国家医疗服务体系 / 牛津大学','NHS / University of Oxford'],['英国国家医疗服务体系 / 曼彻斯特大学','NHS / University of Manchester'],['英国生物样本库 / 剑桥大学','UK Biobank / University of Cambridge'],
+ ['王晓川','Xiaochuan Wang'],['孙金峤','Jinqiao Sun'],['赵晓东','Xiaodong Zhao'],['陈静及血液/肿瘤团队','Jing Chen and the haematology/oncology team'],
+ ['上海','Shanghai'],['重庆','Chongqing'],['北京','Beijing'],['广州','Guangzhou'],['伦敦','London'],['纽卡斯尔','Newcastle'],['牛津','Oxford'],['曼彻斯特','Manchester'],['剑桥','Cambridge'],['贝塞斯达','Bethesda'],['费城','Philadelphia'],['波士顿','Boston'],['辛辛那提','Cincinnati'],['纽约','New York'],['巴尔的摩','Baltimore'],['堪培拉','Canberra'],['墨尔本','Melbourne'],['悉尼','Sydney'],['布里斯班','Brisbane'],['珀斯','Perth'],
+ ['中国','China'],['英国','United Kingdom'],['美国','United States'],['澳大利亚','Australia'],['巴西','Brazil'],['成人与儿童','Adults and children'],['儿童','Children'],['成人','Adults'],['临床与科研','Clinical & research'],['临床','Clinical'],['科研','Research'],
+ ['了解 CVID','Understand CVID'],['首页','Home'],['论文解读','Paper explainers'],['参与登记与研究','Join registries & research'],['相关中心与研究','Related centres & studies'],
+ ];
+const sorted=en=>pairs.map(([zh,eng])=>en?[zh,eng]:[eng,zh]).sort((a,b)=>b[0].length-a[0].length);
+export function localiseDisplay(text,en){
+ // Exact names first; phrases separated by metadata punctuation are handled independently.
+ const exact=pairs.find(p=>p[en?0:1]===text.trim());
+ if(exact)return text.replace(text.trim(),exact[en?1:0]);
+ return text.split(/( · | \/ | — )/).map(part=>{const p=pairs.find(p=>p[en?0:1]===part.trim());return p?part.replace(part.trim(),p[en?1:0]):part;}).join('');
+}
+export function installLocaleText(app,getLanguage){
+ function update(){
+  const en=getLanguage()==='en';document.documentElement.lang=en?'en':'zh-CN';
+  const walker=document.createTreeWalker(app,NodeFilter.SHOW_TEXT);const nodes=[];
+  while(walker.nextNode())nodes.push(walker.currentNode);
+  for(const node of nodes){if(node.parentElement?.closest('script,style,.article-sources'))continue;const value=localiseDisplay(node.nodeValue,en);if(value!==node.nodeValue)node.nodeValue=value;}
+ }
+ new MutationObserver(update).observe(app,{childList:true,subtree:true});update();
+}

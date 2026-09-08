@@ -1,18 +1,28 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A patient-friendly guide to understanding CVID." />
-    <title>CVID Compass</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./src/styles.css?v=20260909" />
-    <link rel="stylesheet" href="./src/details.css?v=20260909" />
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./src/main.js?v=20260909"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CVID Compass — find people like me</title>
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" href="src/homepage.css" />
+  <link rel="stylesheet" href="src/exploration.css" />
+  <link rel="stylesheet" href="src/final-design.css" />
+  <link rel="stylesheet" href="src/editorial.css" />
+  <link rel="stylesheet" href="src/reference-fidelity.css" />
+  <link rel="stylesheet" href="src/network-update.css" />
+  <link rel="stylesheet" href="src/network-cards.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark"><svg class="reference-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M16 1v5M16 26v5M1 16h5M26 16h5M22 10l-4 9-8 3 4-9ZM14 13l4 6"/></svg></span><span>CVID Compass<small>People · Patterns · Progress</small></span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#home" data-i18n="navHome">Home</a><a href="#cvid" data-i18n="navCvid">CVID</a><a href="#find" data-i18n="navFind">Find People</a><a href="#research" data-i18n="navResearch">Research</a><a href="#researchers" data-i18n="navResearchers">Researchers</a><a href="#community" data-i18n="navCommunity">Community</a>
+    </nav>
+    <button class="lang-button" id="language-toggle" type="button">中文</button>
+  </header>
+  <main id="app"></main>
+  <footer><p><strong>CVID Compass</strong> · Phenotype-first discovery for CVID and related antibody deficiencies.</p><p class="fine-print">This platform does not diagnose disease, recommend treatment, or determine study eligibility. Similar features do not mean the same diagnosis.</p></footer>
+  <script type="module" src="src/main.js"></script>
+</body>
 </html>
