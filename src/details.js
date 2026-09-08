@@ -46,7 +46,7 @@ export function installDetailPages(app, getLanguage, centres, genes, setLanguage
     };
     const figure=figures[article.slug];
     const figureAfter=figure?contentBlocks.findIndex(block=>block.type!=='heading'&&figure[1].test(block.text)):-1;
-    const figureHtml=figure?`<figure class="science-figure"><img src="/assets/${figure[0]}" alt="${esc(figure[3])}" width="1536" height="1024" loading="lazy"><figcaption>${esc(zh()?figure[2]:figure[3])}</figcaption></figure>`:'';
+    const figureHtml=figure?`<figure class="science-figure"><img src="./assets/${figure[0]}" alt="${esc(figure[3])}" width="1536" height="1024" loading="lazy"><figcaption>${esc(zh()?figure[2]:figure[3])}</figcaption></figure>`:'';
     const body=contentBlocks.map((block,blockIndex)=>{
       if(block.type==='heading'){
         section+=1;
