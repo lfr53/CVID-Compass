@@ -17,33 +17,29 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-
       - name: Prepare static website
         run: |
           test -f index.html
           test -f src/main.js
-          test -d assets
+          test -f education/src/content-en.js
+          test -f education/src/content-zh.js
           mkdir -p _site
           cp index.html _site/
-          cp -R src assets content _site/
+          cp -R src assets education _site/
+          if [ -d content ]; then cp -R content _site/; fi
           touch _site/.nojekyll
-
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5

@@ -1,0 +1,11 @@
+const escapeText=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function topicIntro(id,zh){const copy={genetics:['Start with the overview, then explore individual genes and immune pathways.','先阅读遗传学总览，再了解具体基因与免疫通路。'],'tests-treatment':['Read your immune test results, then learn what immunoglobulin replacement does.','先读懂免疫检测报告，再了解免疫球蛋白替代治疗的作用。'],research:['Start with the research overview, then read individual paper explainers. Research participation has its own introduction below.','先了解研究进展，再逐篇阅读论文解读；下方另有研究参与介绍。']};return copy[id]?`<p class="topic-intro">${copy[id][zh?1:0]}</p>`:'';}
+export function readingHighlights(article,zh){
+ const paragraphs=article.blocks.filter(b=>b.type!=='heading'&&b.text&&b.text!==article.excerpt);
+ const points=paragraphs.slice(0,3).map(b=>{const match=b.text.match(/^.*?[。！？](?:[”’])?|^.*?[.!?](?=\s|$)/);return match?match[0]:b.text;});
+ return `<aside class="reading-highlights"><h2>${zh?'本篇要点':'At a glance'}</h2><ul>${points.map(p=>`<li>${escapeText(p)}</li>`).join('')}</ul></aside>`;
+}
+export function nextReading(slug,zh){
+ const destinations=slug==='lab-results'?[['Understand immunoglobulin replacement','了解免疫球蛋白替代治疗','article-immunoglobulin-replacement'],['Explore my situation','探索我的情况','find']]:slug==='immunoglobulin-replacement'?[['Read your immune test results','读懂免疫检测报告','article-lab-results'],['Explore related research','探索相关研究','research']]:slug==='family'?[['Find communities and support','寻找社群与支持','community'],['Understand genetics','了解遗传学','cvid/topic/genetics']]:slug==='multi-organ'?[['Explore my situation','探索我的情况','find'],['Find specialist teams','寻找专业团队','researchers']]:slug==='genetics'?[['Explore individual genes','了解具体基因','cvid/topic/genetics'],['Explore related research','探索相关研究','research']]:slug.startsWith('research')?[['Explore research records','探索研究记录','research'],['How to participate in research','如何参与研究','article-research-participation']]:[['Explore my situation','探索我的情况','find'],['Explore CVID topics','浏览科普主题','cvid']];
+ return `<aside class="article-bridge"><h2>${zh?'接下来，你可以了解':'Where to go next'}</h2><div class="reading-next-links">${destinations.filter(d=>d[2]!=='article-'+slug).map(([en,cn,path])=>`<a class="button secondary" href="#${path}">${zh?cn:en} →</a>`).join('')}</div></aside>`;
+}

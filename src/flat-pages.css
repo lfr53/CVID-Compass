@@ -1,0 +1,9 @@
+/* Content sits directly on the page; individual resource cards keep their colours. */
+#app>.page-shell,#app .reference-page,#app .page-shell.reference-page,#app>.learning-hub{background:transparent;border:0;border-radius:0;box-shadow:none;margin:0 auto;padding-top:34px}
+#app .page-breadcrumb{display:none}
+/* Full-width filter sections stay open; individual cards and input controls remain distinct. */
+#app .page-browse>.panel:has(fieldset),#app .page-browse>.panel:has(.filters){background:transparent;border:0;box-shadow:none;border-radius:0;padding:20px 0}
+#app .patient-landing .patient-paths>.panel:first-child{background:#eaf3e9}
+#app .patient-landing .patient-paths>.panel:nth-child(2){background:#eaf2fa}
+#app .patient-landing .patient-paths>.panel:nth-child(3){background:#f1eaf7}
+@media(max-width:850px){#app .reference-page,#app .page-shell.reference-page{margin:0 auto;padding:28px 24px}}
